@@ -9,15 +9,19 @@
     • CSH (C SHell) - The C shell's syntax and usage are very similar to the C programming language. 
     • KSH (Korn SHell) - Created by David Korn at AT & T Bell Labs. The Korn Shell also was the base for the POSIX Shell standard specifications. 
     • TCSH - It is an enhanced but completely compatible version of the Berkeley UNIX C shell (CSH). 
+
 Please note that each shell does the same job, but each understands different command syntax and provides different built-in functions. Under MS-DOS, the shell name is COMMAND.COM which is also used for the same purpose, but it is by far not as powerful as our Linux Shells are!
 Shell Prompt
-There are various ways to get shell access:
+
+##### There are various ways to get shell access:
     • Terminal - Linux desktop provides a GUI based login system. Once logged in you can gain access to a shell by running X Terminal (XTerm), Gnome Terminal (GTerm), or KDE Terminal (KTerm) application. 
     • Connect via secure shell (SSH) - You will get a shell prompt as soon as you log in into a remote server or workstation. 
     • Use the console - A few Linux system also provides a text-based login system. Generally, you get a shell prompt as soon as you log in to the system. 
-How do I find out my current shell name?
+
+### How do I find out my current shell name?
+
 To find all of the available shells in your system, type the following command:
-cat /etc/shells
+** cat /etc/shells **
 In case the /etc/shells file has more than one shell listed under it, then it means that more than one shell is supported by your platform.
 Command Line Interface (CLI)
 The shell provides an interface to Linux where you can type or enter commands using the keyboard. It is known as the command-line interface (CLI). To find out your current shell-type following command.
@@ -30,6 +34,7 @@ PID TTY          TIME CMD
 Click here to attach a file. Need help?
 Basic Command Line Editing
 You can use the following key combinations to edit and recall commands:
+```
     • CTRL + L : Clear the screen. 
     • CTRL + W : Delete the word starting at cursor. 
     • CTRL + U : Clear the line i.e. Delete all words from the command line. 
@@ -40,6 +45,7 @@ You can use the following key combinations to edit and recall commands:
     • CTRL + T : Swap the last two characters before the cursor. 
     • ESC + T : Swap the last two words before the cursor. 
     • CTRL + H : Delete the letter starting at cursor. 
+```    
 Executing A Command
 Type your command, and press enter key. Try this the date command which will display current date and time:
 date
@@ -47,20 +53,23 @@ Sample outputs:
 Mon Jul  6 23:20:19 IST 2020
 Command And File Completion
 The Bash shell will auto-complete file and command names, when possible, and/or when you tell them to. For example, if you type sle and pressing Tab key will make the shell automatically complete your command name. Another example, if you type ls /e and pressing Tab key will make the shell automatically complete your word to /etc as it sees that /etc/ is a directory which starts with /e.
-Getting Help In Linux
+##### Getting Help In Linux
     • Most commands under Linux will come with documentation. 
     • You can view documentation with the man command or info command. In this example, open the manpage for date command: 
-man date
+##### man date
     • You can read info documentation as follows for the ls command: 
-info ls
+##### info ls
     • Many commands accept --help or -h command-line option. In this example, display help options for the date command: 
-date --help
+##### date --help
     • In short use any one of the following option to get more information about Linux commands: 
+```
 man commandName
 info commandName
 commandName -h
 commandName --help
+```
 The Unix philosophy is a philosophical approach to developing software based on the experience of leading developers of the Unix operating system. The following philosophical approaches also apply to Linux operating systems.
+
     • Do one thing and do it well - Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface. 
     • Everything is file - Ease of use and security is offered by treating hardware as a file. 
     • Small is beautiful. 
@@ -71,7 +80,7 @@ The Unix philosophy is a philosophical approach to developing software based on 
     • Keep it Simple, Stupid (KISS). 
 
 
-Directory Structure and File System Hierarchy
+### Directory Structure and File System Hierarchy
 
 / – The Root Directory
 Everything on your Linux system is located under the / directory, known as the root directory. You can think of the / directory as being similar to the C:\ directory on Windows – but this isn’t strictly true, as Linux doesn’t have drive letters. While another partition would be located at D:\ on Windows, this other partition would appear in another folder under / on Linux.
