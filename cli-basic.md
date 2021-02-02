@@ -81,34 +81,55 @@ The Unix philosophy is a philosophical approach to developing software based on 
 
 
 ### Directory Structure and File System Hierarchy
-
+```
 / – The Root Directory
 Everything on your Linux system is located under the / directory, known as the root directory. You can think of the / directory as being similar to the C:\ directory on Windows – but this isn’t strictly true, as Linux doesn’t have drive letters. While another partition would be located at D:\ on Windows, this other partition would appear in another folder under / on Linux.
+```
+```
 /bin – Essential User Binaries
 The /bin directory contains the essential user binaries (programs) that must be present when the system is mounted in single-user mode. Applications such as Firefox are stored in /usr/bin, while important system programs and utilities such as the bash shell are located in /bin. The /usr directory may be stored on another partition – placing these files in the /bin directory ensures the system will have these important utilities even if no other file systems are mounted. The /sbin directory is similar – it contains essential system administration binaries.
+```
+```
 /etc – Configuration Files
 The /etc directory contains configuration files, which can generally be edited by hand in a text editor. Note that the /etc/ directory contains system-wide configuration files – user-specific configuration files are located in each user’s home directory.
+```
+```
 /home – Home Folders
 The /home directory contains a home folder for each user. For example, if your user name is bob, you have a home folder located at /home/bob. This home folder contains the user’s data files and user-specific configuration files. Each user only has to write access to their own home folder and must obtain elevated permissions (become the root user) to modify other files on the system.
+```
+```
 /opt – Optional Packages
 The /opt directory contains subdirectories for optional software packages. It’s commonly used by proprietary software that doesn’t obey the standard file system hierarchy – for example, a proprietary program might dump its files in /opt/application when you install it.
+```
+```
 /root – Root Home Directory
 The /root directory is the home directory of the root user. Instead of being located at /home/root, it’s located at /root. This is distinct from /, which is the system root directory.
+```
+```
 /sbin – System Administration Binaries
 The /sbin directory is similar to the /bin directory. It contains essential binaries that are generally intended to be run by the root user for system administration.
+```
+```
 /tmp – Temporary Files
 Applications store temporary files in the /tmp directory. These files are generally deleted whenever your system is restarted and may be deleted at any time by utilities such as tmpwatch.
+```
+```
 /usr – User Binaries & Read-Only Data
 The /usr directory contains applications and files used by users, as opposed to applications and files used by the system. For example, non-essential applications are located inside the /usr/bin directory instead of the /bin directory and non-essential system administration binaries are located in the /usr/sbin directory instead of the /sbin directory. Libraries for each are located inside the /usr/lib directory. The /usr directory also contains other directories – for example, architecture-independent files like graphics are located in /usr/share.
 The /usr/local directory is where locally compiled applications install to by default – this prevents them from mucking up the rest of the system.
+```
+```
 /var – Variable Data Files
 The /var directory is the writable counterpart to the /usr directory, which must be read-only in normal operation. Log files and everything else that would normally be written to /usr during normal operation are written to the /var directory. For example, you’ll find log files in /var/log.
 Directory Navigation
+```
 
 Directory navigation using a shell usually starts in your home directory. Your home directory is usually denoted by ~ and often points to /home/yourname.
 To check which directory you are in, you can use the pwd command.
 The current directory can be referred to using . So to read a file named names.txt in the current directory, you can use either of the following:
-cat names.txt or cat ./names.txt
+**cat names.txt or cat ./names.txt**
 The parent directory can be referred to using .. So to read a file named names.txt in the parent directory of the current directory you are in, you can use either of the following:
+```
 cat ../names.txt
+```
 You can also chain these together and do things similar to cat ./.././names.txt, though doing things like that would be a bit pointless.
