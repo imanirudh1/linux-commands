@@ -1,4 +1,4 @@
-What Is a Shell?
+### What Is a Shell?
     • The shell is a user program or it is an environment provided for user interaction. 
     • It is a command language interpreter that executes commands read from the standard input device such as a keyboard or from a file. 
     • The shell gets started when you log in or open a console (terminal). 
