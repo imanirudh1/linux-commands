@@ -5,7 +5,8 @@ tr is a command-line utility in Linux and Unix systems that translates, deletes,
 The tr command can perform operations like removing repeated characters, converting uppercase to lowercase, and basic character replacing and removing. Typically, it is used in combination with other commands through piping.
 
 In this tutorial, we will show you how to use the tr command through practical examples and detailed explanations of the most common options.
-How to Use the tr Command
+
+### How to Use the tr Command
 
 The syntax for the tr command is as follows:
 ```
@@ -86,7 +87,8 @@ echo 'Linux ize' | tr -t 'abcde' '12'
 Linux ize
 ```
 You can see that the last three characters of the SET1 are removed. SET1 becomes ‘ab’, the same length as SET2, and no replacement is made.
-Combining options
+
+### Combining options
 
 The tr command also allows you to combine its options. For example, the following command first replaces all characters except i with 0 and then squeezes the repeated 0 characters:
 ```
@@ -95,12 +97,12 @@ echo 'Linux ize' | tr -cs 'i' '0'
 ```
 0i0i0
 ```
-Tr Command Examples
+### Tr Command Examples
 
 In this section, we’ll cover a few examples of common uses of the tr command.
 Convert lower case to upper case
 
-Converting lower case to upper case or reverse is one of the typical use cases of the tr command. [:lower:] matches all lower case characters and [:upper:] matches all uppercase characters.
+## Converting lower case to upper case or reverse is one of the typical use cases of the tr command. [:lower:] matches all lower case characters and [:upper:] matches all uppercase characters.
 ```
 echo 'Linuxize' | tr '[:lower:]' '[:upper:]'
 ```
@@ -112,7 +114,8 @@ Instead of character classes, you can also use ranges:
 echo 'Linuxize' | tr 'a-z' 'A-Z'
 
 To convert upper case to lower case, simply switch the places of the sets.
-Remove all non-numeric characters
+
+### Remove all non-numeric characters
 
 The following command removes all non-numeric characters:
 
@@ -122,18 +125,19 @@ echo "my phone is 123-456-7890" | tr -cd [:digit:]
 
 1234567890
 
-Put each word in a new line
+### Put each word in a new line
 
 To put each word in a new line, we need to match all non-alphanumerical characters and replace them with a new line:
-
+```
 echo 'GNU is an operating system' | tr -cs '[:alnum:]' '\n'
-
+```
+```
 GNU
 is
 an
 operating
 system
-
+```
 ### Remove blank lines
 
 To delete the blank lines simply squeeze the repetitive newline characters:
@@ -141,7 +145,8 @@ To delete the blank lines simply squeeze the repetitive newline characters:
 tr -s '\n' < file.txt > new_file.txt
 ```
 In the command above we are using the redirection symbol < to pass the content of the file.txt to the tr command. The redirection > writes the output of the command to new_file.txt.
-Print $PATH directories on a separate line
+
+### Print $PATH directories on a separate line
 
 The $PATH environmental variable is a colon-delimited list of directories that tells the shell which directories to search for executable files when you type a command.
 
