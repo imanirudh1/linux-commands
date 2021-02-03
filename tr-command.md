@@ -168,4 +168,4 @@ tr is a command for translating or deleting characters.
 
 Although very useful, tr can work only with single characters. For more complex pattern matching and string manipulation, you should use sed or awk .
 
-If you have any questions or feedback, feel free to leave a comment.
+
