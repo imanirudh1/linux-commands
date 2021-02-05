@@ -53,6 +53,7 @@ Sample outputs:
 Mon Jul  6 23:20:19 IST 2020
 Command And File Completion
 The Bash shell will auto-complete file and command names, when possible, and/or when you tell them to. For example, if you type sle and pressing Tab key will make the shell automatically complete your command name. Another example, if you type ls /e and pressing Tab key will make the shell automatically complete your word to /etc as it sees that /etc/ is a directory which starts with /e.
+
 ##### Getting Help In Linux
     • Most commands under Linux will come with documentation. 
     • You can view documentation with the man command or info command. In this example, open the manpage for date command: 
@@ -81,6 +82,7 @@ The Unix philosophy is a philosophical approach to developing software based on 
 
 
 ### Directory Structure and File System Hierarchy
+
 ```
 / – The Root Directory
 Everything on your Linux system is located under the / directory, known as the root directory. You can think of the / directory as being similar to the C:\ directory on Windows – but this isn’t strictly true, as Linux doesn’t have drive letters. While another partition would be located at D:\ on Windows, this other partition would appear in another folder under / on Linux.
